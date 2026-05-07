@@ -1,7 +1,16 @@
 load("@rules_python//python:defs.bzl", "py_binary")
 
+# Uses rules_python pip hub (pycparser from requirements_lock.txt)
 py_binary(
     name = "main",
     srcs = ["main.py"],
     deps = ["@pypi//pycparser"],
+)
+
+# Uses ofiuco poetry hub (cffi + pycparser from poetry.lock)
+# cffi has platform-specific wheels: different URLs on macOS vs Linux
+py_binary(
+    name = "main_cffi",
+    srcs = ["main_cffi.py"],
+    deps = ["@poetry_deps//cffi"],
 )
