@@ -12,5 +12,5 @@ py_binary(
 py_binary(
     name = "main_cffi",
     srcs = ["main_cffi.py"],
-    deps = ["@poetry_deps//cffi"],
+    deps = ["@poetry_deps//:cffi"],
 )
