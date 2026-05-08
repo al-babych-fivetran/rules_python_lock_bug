@@ -5,7 +5,7 @@ bazel_dep(name = "rules_python", version = "2.0.0")
 git_override(
     module_name = "rules_python",
     remote = "https://github.com/aignas/rules_python.git",
-    commit = "6aa2c4f3541ebb8fde4c82c5a92007e79a7a59f4",
+    commit = "9f8154d8b4e6370fcd2f9d66c0d716470011c407",
 )
 bazel_dep(name = "ofiuco", version = "0.8.3")
 
